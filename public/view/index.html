@@ -23,17 +23,18 @@
                 <h6 class="informacion">Ingresa solo letras minusculas y sin acento</h6>
             </div>
             <div class="btn-principales">
-                <input class="btn-Encriptar" type="button" value="Encriptar">
-                <input class="btn-Desencriptar" type="button" value="Desencriptar">
+                <button class="btn-Encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-Desencriptar" onclick=" btnDesencriptar()">Desencriptar</button>
             </div>
         </section>
         <section>
-            <textarea class="resultado" cols="30" rows="10"></textarea>
+            <textarea id="resultado" class="resultado" cols="30" rows="10"></textarea>
             <div>
-                <input class="btn-Copiar" type="button" value="Copiar">
+                <button class="btn-Copiar" onclick="copiar()">Copiar</button>
             </div>
         </section>
     </main>
+    <script src="../js/script.js"></script>
     <footer>
         <h3> Creado por Strange Corp</h3>
     </footer>
