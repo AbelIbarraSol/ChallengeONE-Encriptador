@@ -5,30 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- Font family: inter Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 <body>
     <header>
-        <h1>Encryptador Web por Abel IBARRA</h1>
+        <img src="../assets/icons/logo.svg" class="logo">
     </header>
     <main>
         <section>
-            <textarea name="Ingrese el texto aquí" class="IngresarTexto" cols="30" rows="10"></textarea>
-        </section>
-        <section>
+            <textarea class="textoInicial" placeholder="Ingrese el texto aquí" cols="30" rows="10"></textarea>
             <div>
-                <h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam iure, 
-                    facilis amet animi, quo deserunt sit dolores corporis sunt natus sint ratione 
-                    laudantium odit, consequuntur delectus ipsum distinctio ut!
-                </h4>
+                <h6 class="informacion">Ingresa solo letras minusculas y sin acento</h6>
             </div>
-            <input type="button" class="btnCopiar" value="Copiar">
+            <div class="btn-principales">
+                <input class="btn-Encriptar" type="button" value="Encriptar">
+                <input class="btn-Desencriptar" type="button" value="Desencriptar">
+            </div>
         </section>
         <section>
-            <p>Apenas letras minusculas y sin acento</p>
-            <input type="button" class="btnEncriptar" value="Encriptar">
-            <input type="button" class="btnDesencriptar" value="Desencriptar">
+            <textarea class="resultado" cols="30" rows="10"></textarea>
+            <div>
+                <input class="btn-Copiar" type="button" value="Copiar">
+            </div>
         </section>
     </main>
     <footer>
