@@ -17,17 +17,18 @@
         <img src="../assets/icons/logo.svg" class="logo">
     </header>
     <main>
-        <section>
+        <section class="section-a">
             <textarea class="textoInicial" placeholder="Ingrese el texto aquí" cols="30" rows="10"></textarea>
-            <div>
-                <h6 class="informacion">Ingresa solo letras minusculas y sin acento</h6>
+            <div class="informacion">
+                <img src="../assets/icons/icono_exclamacion.svg">
+                <h6>Ingresa solo letras minúsculas y sin acentos.</h6>
             </div>
             <div class="btn-principales">
                 <button class="btn-Encriptar" onclick="btnEncriptar()">Encriptar</button>
                 <button class="btn-Desencriptar" onclick=" btnDesencriptar()">Desencriptar</button>
             </div>
         </section>
-        <section>
+        <section class="section-b">
             <textarea id="resultado" class="resultado" cols="30" rows="10"></textarea>
             <div>
                 <button class="btn-Copiar" onclick="copiar()">Copiar</button>

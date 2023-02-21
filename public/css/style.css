@@ -3,47 +3,72 @@
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
+    line-height: 150%;
+    overflow-y: hidden;
 }
 
 .logo{
     padding: 0 40px;
-    margin: 40px 40px;
+    margin: 20px 80px;
 }
 
 main{
+    background: rgb(201, 201, 194);
+    width: auto;
+    height: auto;
     display: flex;
-    margin: 40px 40px 0 80px;
+    margin-bottom: 50px;
+}
+.section-a{
+    background: blue;
+    height: 630px;
+    /* margin: 20px 40px 20px 250px; */
+}
+
+.section-b{
+    background: red;
+    height: 630px;
+    margin-left: 50px;
+    /* margin: 20px 250px 20px 40px; */
 }
 
 .textoInicial{
+    height: 500px;
     font-size: 32px;
-    background-color: transparent;
+    /* background-color: transparent; */
     border: none;
+    resize: none;/*modificar tamaño: none*/
     color: #0A3871;
-    margin-top: 90px;
 }
 ::placeholder{ color: #0A3871;}
 .textoInicial:focus{ outline: none; }
 
 .informacion{
+    display: flex;
     font-size: 16px;
+    margin-top: 5px;
+}
+.informacion h6{
+    margin-left: 5px;
 }
 
 .btn-principales{
     display: flex;
-    margin-top: 16px;
+    gap: 24px;
+    margin-top: 10px;
 }
 
 button{
     width: 328px;
-    height: 67px;
+    height: 70px;
+    font-size: 16px;
+    text-align: center;
     border: 1px solid #0A3871;
     border-radius: 24px;
     cursor: pointer;
 }
 
 .btn-Encriptar{
-    margin-right: 24px;
     background: #0A3871; 
     color: #FFFFFF;
 }
@@ -51,26 +76,27 @@ button{
 .btn-Desencriptar{
     color: #0A3871;
     background: #D8DFE8;
-}
-.btn-Desencriptar:active{ background-color: transparent; }
+}.btn-Desencriptar:active{ background: none; }
 
 .resultado{
+    height: 630px;
     font-size: 24px;
+    resize: none;
     background: #FFFFFF ;
     background-image: url("../assets/icons/Muñeco.svg");
     background-repeat: no-repeat; /* La imagen solo se va a ver una sola vez */
+    background-position: center;
     color: #0A3871;
     border: none;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    margin-left: 108px;
     position: fixed;
 }
-.resultado:focus{ outline: none; } /*focu{} activas las propiedades una vez el usuario le da click al elemento*/
+.resultado:focus{ outline: none; } /*focus{} activas las propiedades una vez el usuario le da click al elemento*/
 
 .btn-Copiar{
-    margin-top: 402px;
-    margin-left: 108px;
+    margin-top: 560px;
     position: absolute;
+    margin-left: 120px;
 
 }
