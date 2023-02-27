@@ -1,16 +1,22 @@
-let textoinicial = document.querySelector(".textoInicial" );
-let textofinal = document.querySelector(".resultado");
+let textoinicial = document.querySelector(".panelIngreso-textArea");
+let textofinal = document.querySelector(".panelEgreso-textArea");
 
 
 
 function encriptar(texto) {
-    texto = texto.toLowerCase();
-    let matrizCodigo = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]];
-    for (let i = 0; i < matrizCodigo.length; i++) {
-        if (texto.includes(matrizCodigo[i][0])) {
-            texto = texto.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-        }
-    }return texto;
+    if (texto == "") {
+        document.getElementById('panelEgreso-textArea').s;
+    } else {
+        texto = texto.toLowerCase();
+        let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+        for (let i = 0; i < matrizCodigo.length; i++) {
+            if (texto.includes(matrizCodigo[i][0])) {
+                texto = texto.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+            }
+        } return texto;
+    }
+
+
 }
 
 function btnEncriptar() {
@@ -22,12 +28,12 @@ function btnEncriptar() {
 
 function desencriptar(texto) {
     texto = texto.toLowerCase();
-    let matrizCodigo = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]];
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     for (let i = 0; i < matrizCodigo.length; i++) {
         if (texto.includes(matrizCodigo[i][0])) {
             texto = texto.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
         }
-    }return texto;
+    } return texto;
 }
 
 function btnDesencriptar() {
@@ -37,8 +43,12 @@ function btnDesencriptar() {
     textofinal.style.backgroundImage = "none";
 }
 
-function copiar(){
-    var texto = document.getElementById("resultado");
+function mostrarBotonCopiar() {
+    document.getElementById('panelEgreso-buttonCopiar').style.display = 'block';
+}
+
+function copiar() {
+    var texto = document.getElementById("panelEgreso-textArea");
     texto.select();
     texto.setSelectionRange(0, 99999);
     document.execCommand('copy');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,26 +13,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
+
 <body>
-    <header>
-        <img src="../assets/icons/logo.svg" class="logo">
+    <header class="headerPrincipal">
+        <img class="headerPrincipal-iconoLogo" src="../assets/icons/logo.svg">
     </header>
-    <main>
-        <section class="section-a">
-            <textarea class="textoInicial" placeholder="Ingrese el texto aquí" cols="30" rows="10"></textarea>
-            <div class="informacion">
-                <img src="../assets/icons/icono_exclamacion.svg">
-                <h6>Ingresa solo letras minúsculas y sin acentos.</h6>
-            </div>
-            <div class="btn-principales">
-                <button class="btn-Encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="btn-Desencriptar" onclick=" btnDesencriptar()">Desencriptar</button>
+    <main class="contenidoPrincipal">
+        <section class="panelIngreso">
+            <div class="container">
+                <textarea class="panelIngreso-textArea" placeholder="Ingrese el texto aquí" cols="30" rows="10"></textarea>
+                <div class="panelIngreso-infoIngreso">
+                    <img class="panelIngreso-infoIngreso-icono" src="../assets/icons/icono_exclamacion.svg">
+                    <h6 class="panelIngreso-infoIngreso-subtitulo">Ingresa solo letras minúsculas y sin acentos.</h6>
+                </div>
+                <div class="panelIngreso-button">
+                    <button class="panelIngreso-button-Encriptar" onclick="btnEncriptar(), mostrarBotonCopiar()">Encriptar</button>
+                    <button class="panelIngreso-button-Desencriptar" onclick=" btnDesencriptar()">Desencriptar</button>
+                </div>
             </div>
         </section>
-        <section class="section-b">
-            <textarea id="resultado" class="resultado" cols="30" rows="10"></textarea>
-            <div>
-                <button class="btn-Copiar" onclick="copiar()">Copiar</button>
+        <section class="panelEgreso">
+            <div class="container">
+                <textarea class="panelEgreso-textArea" id="panelEgreso-textArea"  cols="30" rows="10"></textarea>
+                <button class="panelEgreso-buttonCopiar" id="panelEgreso-buttonCopiar" onclick="copiar()">Copiar</button>
             </div>
         </section>
     </main>
@@ -40,4 +44,5 @@
         <h3> Creado por Strange Corp</h3>
     </footer>
 </body>
+
 </html>
