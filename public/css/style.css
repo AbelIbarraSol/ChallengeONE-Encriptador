@@ -5,11 +5,12 @@
     font-weight: 400;
 }
 
-.headerPrincipal {
-    margin: 2% 94% 2% 6%;
+.headerPrincipal{
+    margin: 2% 94% 2% 4%;
 }
 
-.contenidoPrincipal {
+.contenidoPrincipal{
+    height: 650px;
     display: flex;
     justify-content: space-around;
 }
@@ -27,7 +28,7 @@
 
 .panelIngreso-textArea {
     height: 65%;
-    padding: 3% 0;
+    padding: 3% 3%;
     font-size: 32px;
     border: none;
     border-radius: 20px;
@@ -39,17 +40,23 @@
 
 .panelIngreso-infoIngreso {
     display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .panelIngreso-infoIngreso-subtitulo {
-    margin-left: 2%;
     font-size: 16px;
+    color: #343A40;
+}
+
+.panelIngreso-infoIngreso .fa-solid {
+    color: #343A40;
 }
 
 .panelIngreso-button {
     margin-bottom: 3%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .panelIngreso-button-Encriptar {
@@ -89,13 +96,42 @@
     background: #FFFFFF ;
     background-image: url("../assets/icons/Muñeco.svg");
     background-repeat: no-repeat; /* La imagen solo se va a ver una sola vez */
-    background-position: center;
+    background-position: center 20%;
     color: #0A3871;
     border: none;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }.resultado:focus{ outline: none; } /*focus{} activas las propiedades una vez el usuario le da click al elemento*/
 
+.panelEgreso-mensaje{
+    margin-top: 15%;
+    align-self: center;
+    position: absolute;
+    background: none;
+}
+
+.panelEgreso-mensaje-validacion{
+    display: none;
+    margin: 15px 0;
+    background: none;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    color: #343A40;
+    align-self: center;
+}
+
+.panelEgreso-mensaje-peticion{
+    display: none;
+    font-size: 16px;
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: #495057;
+    align-self: center;
+}
 .panelEgreso-buttonCopiar {
     width: 200px;
     height: 50px;
@@ -111,3 +147,36 @@
     color: #0A3871;
     cursor: pointer;
 }.panelEgreso-buttonCopiar:active{ background: none; }
+
+.rodapePrincipal .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+    margin-top: 20px;
+    background: #0A3871;
+}
+
+.container .rodapePrincipal-copyrigth{
+    font-size: 16px;
+    text-align: start;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background: none;
+    color: #FFFFFF;
+}
+.container .rodapePrincipal-link{
+    display: flex;
+    background: none;
+}
+
+.rodapePrincipal-link-socialMedia{
+    margin: 0 10px;
+    background: transparent;
+}
+.rodapePrincipal-link-socialMedia .fa-brands{
+    font-size: 40px;
+    background: transparent;
+    color: #FFFFFF;
+}

@@ -1,11 +1,14 @@
 let textoinicial = document.querySelector(".panelIngreso-textArea");
 let textofinal = document.querySelector(".panelEgreso-textArea");
-
-
+let mensaje_validacion = document.getElementById('panelEgreso-mensaje-validacion');
+let mensaje_peticion = document.getElementById('panelEgreso-mensaje-peticion');
+let btn_Copiar = document.getElementById('panelEgreso-buttonCopiar');
 
 function encriptar(texto) {
     if (texto == "") {
-        document.getElementById('panelEgreso-textArea').s;
+        mensaje_validacion.style.display = 'block';
+        mensaje_peticion.style.display = 'block';
+        textoinicial.style.backgroundImage = url("../assets/icons/Muñeco.svg");
     } else {
         texto = texto.toLowerCase();
         let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -16,7 +19,6 @@ function encriptar(texto) {
         } return texto;
     }
 
-
 }
 
 function btnEncriptar() {
@@ -24,6 +26,8 @@ function btnEncriptar() {
     textofinal.value = textoEncriptado;
     textoinicial.value = "";
     textofinal.style.backgroundImage = "none";
+    mensaje_validacion.style.display = 'none';
+    mensaje_peticion.style.display = 'none';
 }
 
 function desencriptar(texto) {
@@ -44,12 +48,11 @@ function btnDesencriptar() {
 }
 
 function mostrarBotonCopiar() {
-    document.getElementById('panelEgreso-buttonCopiar').style.display = 'block';
+    btn_Copiar.style.display = 'block';
 }
 
 function copiar() {
-    var texto = document.getElementById("panelEgreso-textArea");
-    texto.select();
-    texto.setSelectionRange(0, 99999);
+    textofinal.select();
+    textofinal.setSelectionRange(0, 99999);
     document.execCommand('copy');
 }

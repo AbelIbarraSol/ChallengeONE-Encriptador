@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ccf4c900d0.js" crossorigin="anonymous"></script>
     <title>Encriptador</title>
 </head>
 
@@ -21,27 +23,40 @@
     <main class="contenidoPrincipal">
         <section class="panelIngreso">
             <div class="container">
-                <textarea class="panelIngreso-textArea" placeholder="Ingrese el texto aquí" cols="30" rows="10"></textarea>
+                <textarea class="panelIngreso-textArea" placeholder="Ingrese el texto aquí" cols="30"
+                    rows="10"></textarea>
                 <div class="panelIngreso-infoIngreso">
-                    <img class="panelIngreso-infoIngreso-icono" src="../assets/icons/icono_exclamacion.svg">
+                    <i class="fa-solid fa-circle-info"></i>
                     <h6 class="panelIngreso-infoIngreso-subtitulo">Ingresa solo letras minúsculas y sin acentos.</h6>
                 </div>
                 <div class="panelIngreso-button">
-                    <button class="panelIngreso-button-Encriptar" onclick="btnEncriptar(), mostrarBotonCopiar()">Encriptar</button>
+                    <button class="panelIngreso-button-Encriptar"
+                        onclick="btnEncriptar(), mostrarBotonCopiar()">Encriptar</button>
                     <button class="panelIngreso-button-Desencriptar" onclick=" btnDesencriptar()">Desencriptar</button>
                 </div>
             </div>
         </section>
         <section class="panelEgreso">
             <div class="container">
-                <textarea class="panelEgreso-textArea" id="panelEgreso-textArea"  cols="30" rows="10"></textarea>
+                <textarea class="panelEgreso-textArea" id="panelEgreso-textArea" cols="30" rows="10" readonly></textarea>
+                <div class="panelEgreso-mensaje">
+                    <h1 class="panelEgreso-mensaje-validacion" id="panelEgreso-mensaje-validacion">Ningún mensaje fue <br>encontrado</h1>
+                    <h4 class="panelEgreso-mensaje-peticion" id="panelEgreso-mensaje-peticion">Ingresa el texto que desees encriptar o<br> desencriptar </h4>
+                </div>
                 <button class="panelEgreso-buttonCopiar" id="panelEgreso-buttonCopiar" onclick="copiar()">Copiar</button>
             </div>
         </section>
+        <script src="../js/script.js"></script>
     </main>
-    <script src="../js/script.js"></script>
-    <footer>
-        <h3> Creado por Strange Corp</h3>
+    <footer class="rodapePrincipal">
+        <div class="container">
+            <h3 class="rodapePrincipal-copyrigth">&copy; 2023 Todos los derechos reservados <br> Desarrollado por Abel Ibarra Solgorre para Challenge ONE</h3>
+            <div class="rodapePrincipal-link">
+                <a class="rodapePrincipal-link-socialMedia" href="http://www.linkedin.com/in/abel-ibarra-solgorre"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="rodapePrincipal-link-socialMedia" href="https://github.com/AbelIbarraSol"><i class="fa-brands fa-github"></i></a>
+                <a class="rodapePrincipal-link-socialMedia" href="https://codepen.io/mrStrange01"><i class="fa-brands fa-codepen"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 
