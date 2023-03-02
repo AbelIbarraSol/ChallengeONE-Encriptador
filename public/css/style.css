@@ -10,7 +10,6 @@
 }
 
 .contenidoPrincipal{
-    height: 650px;
     display: flex;
     justify-content: space-around;
 }
@@ -28,7 +27,6 @@
 
 .panelIngreso-textArea {
     height: 65%;
-    padding: 3% 3%;
     font-size: 32px;
     border: none;
     border-radius: 20px;
@@ -87,6 +85,7 @@
     height: 600px;
     display: flex;
     justify-content: center;
+    
 }
 
 .panelEgreso-textArea{
@@ -105,6 +104,7 @@
 
 .panelEgreso-mensaje{
     margin-top: 15%;
+    width: 300px;
     align-self: center;
     position: absolute;
     background: none;
@@ -200,5 +200,3 @@
     background: transparent;
     color: #FFFFFF;
 }
-
-/* Reponsive */
