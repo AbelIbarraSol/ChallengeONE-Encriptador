@@ -1,60 +1,56 @@
 /* Reponsive */
 @media screen and (max-width: 800px) {
-    .headerPrincipal {
-        margin: 7% 0 2% 6%;
-    }
-
     .contenidoPrincipal {
         flex-direction: column;
-        justify-content: space-between;
         width: 100%;
     }
-
+    
     .contenidoPrincipal .panelIngreso{
-        height: 60%;
         width: 90%;
         align-self: center;
     }
+    
     .panelIngreso .container{
-        height: 450px;
-        margin-bottom: 6%;
+        height: 750px;
+        margin-bottom: 64px;
     }
 
     .panelIngreso-button{
         margin-bottom: 0;
     }
-    
+
+    .panelIngreso-textArea,.panelIngreso-infoIngreso,.panelIngreso-button {
+        width: 99%;
+        align-self: flex-start;
+    }
+
     .contenidoPrincipal .panelEgreso {
-        height: 40%;
         width: 90%;
         align-self: center;
     }
 
     .panelEgreso .container {
-        height: 350px;
+        height: 130px;
     }
 
     .panelEgreso-textArea{
-        width: 100%;
-        height: 70%;
         background-image: none;
     }
 
     .panelEgreso-mensaje{
-        margin-top: 0;
-        width: 500px;
+        margin: 32px 0 0 0;
+        order: -1;
     }
 
     .panelEgreso-buttonCopiar {
         width: 81%;
-        margin-bottom: 8%;
     }
 
     .rodapePrincipal .container {
         height: 100px;
         margin-top: 0;
     }
-    .container .rodapePrincipal-link{
+    .rodapePrincipal-author-link {
         margin-left: 5%;
     }
 }

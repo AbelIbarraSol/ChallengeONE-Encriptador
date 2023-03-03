@@ -5,39 +5,56 @@
     font-weight: 400;
 }
 
-.headerPrincipal{
-    margin: 2% 94% 2% 4%;
+.headerPrincipal {
+    height: 40px;
 }
 
-.contenidoPrincipal{
+.contenidoPrincipal {
     display: flex;
     justify-content: space-around;
 }
 
-.panelIngreso{
+.panelIngreso {
     width: 60%;
 }
 
 .panelIngreso .container {
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.panelIngreso-iconoLogo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4%;
+}
+
 .panelIngreso-textArea {
-    height: 65%;
+    width: 90%;
+    height: 60%;
+    align-self: flex-end;
     font-size: 32px;
     border: none;
     border-radius: 20px;
     resize: none;
     color: #0A3871;
 }
-::placeholder { color: #0A3871;}
-.panelIngreso-textArea:focus { outline: none;}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.panelIngreso-textArea:focus {
+    outline: none;
+}
 
 .panelIngreso-infoIngreso {
     display: flex;
+    height: 9%;
+    width: 90%;
+    align-self: flex-end;
     align-items: center;
     gap: 4px;
 }
@@ -52,8 +69,10 @@
 }
 
 .panelIngreso-button {
-    margin-bottom: 3%;
     display: flex;
+    width: 90%;
+    margin-bottom: 20px;
+    align-self: flex-end;
     justify-content: space-between;
 }
 
@@ -79,66 +98,78 @@
     text-align: center;
     color: #0A3871;
     cursor: pointer;
-}.panelIngreso-button-Desencriptar:active{ background: none; }
-
-.panelEgreso .container {
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    
 }
 
-.panelEgreso-textArea{
-    padding: 5% 5%;
-    font-size: 24px;
-    resize: none;
-    background: #FFFFFF ;
-    background-image: url("../assets/icons/Muñeco.svg");
-    background-repeat: no-repeat; /* La imagen solo se va a ver una sola vez */
-    background-position: center 20%;
-    color: #0A3871;
-    border: none;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
-}.panelEgreso-textArea:focus{ outline: none; } /*focus{} activas las propiedades una vez el usuario le da click al elemento*/
-
-.panelEgreso-mensaje{
-    margin-top: 15%;
-    width: 300px;
-    align-self: center;
-    position: absolute;
+.panelIngreso-button-Desencriptar:active {
     background: none;
 }
 
-.panelEgreso-mensaje-validacion{
-    display: none;
-    margin: 15px 0;
+.panelEgreso {
+    width: 25%;
+}
+
+.panelEgreso .container {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #FFFFFF;
+    justify-content: space-between;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.panelEgreso-textArea {
+    width: 90%;
+    height: 60%;
+    padding: 5% 5% 0 5%;
+    font-size: 24px;
+    resize: none;
+    background: none;
+    background-image: url("../assets/icons/Muñeco.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #0A3871;
+    border: none;
+}
+
+.panelEgreso-textArea:focus {
+    outline: none;
+}
+
+.panelEgreso-mensaje {
+    width: 80%;
+    height: 20%;
+    margin-bottom: 25%;
+    align-self: center;
+    background: none;
+}
+
+.panelEgreso-mensaje-validacion {
+    margin-bottom: 15px;
+    text-align: center;
     background: none;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    text-align: center;
     color: #343A40;
-    align-self: center;
 }
 
-.panelEgreso-mensaje-peticion{
-    display: none;
+.panelEgreso-mensaje-peticion {
     font-size: 16px;
     background: none;
     font-style: normal;
     font-weight: 400;
     text-align: center;
     color: #495057;
-    align-self: center;
 }
+
 .panelEgreso-buttonCopiar {
     width: 200px;
     height: 50px;
-    margin-bottom: 2%;
-    align-self: flex-end;
+    margin-bottom: 20px;
     display: none;
-    position: absolute;
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 20px;
@@ -146,38 +177,43 @@
     text-align: center;
     color: #0A3871;
     cursor: pointer;
-}.panelEgreso-buttonCopiar:active{ background: none; }
+}
 
-.rodapePrincipal .container{
+.panelEgreso-buttonCopiar:active {
+    background: none;
+}
+
+
+.container .rodapePrincipal-author{
     display: flex;
     justify-content: center;
     gap: 5px;
     align-items: center;
-    height: 150px;
-    margin-top: 20px;
-    background: #0A3871;
+    margin: 30px 0 20px 0;
+    background: none;
 }
-.rodapePrincipal-copyrigth{
-    height: 80px;
-    padding-left: 10px;
-    border-left: #FFFFFF solid 7px;
+
+.rodapePrincipal-author-logo {
+    width: 50px;
+    height: 50px;
+    background: none;
 }
-.container .rodapePrincipal-copyrigth{
+
+.rodapePrincipal-author .rodapePrincipal-author-copyrigth {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    height: 60px;
+    padding-left: 10px;
     background: none;
-    color: #FFFFFF;
+    border-left: solid #343A40 5px;
+    color: #343A40;
 }
 
-.rodapePrincipal-logo-author{
-    width: 80px;
-    height: 80px;
-    background: none;    
-}
 
-.rodapePrincipal-copyrigth-texto-author{
+
+.rodapePrincipal-author-copyrigth-texto {
     font-size: 16px;
     text-align: start;
     font-family: 'Inter', sans-serif;
@@ -185,18 +221,19 @@
     background: none;
 }
 
-.container .rodapePrincipal-link{
+.rodapePrincipal-author .rodapePrincipal-author-link {
     display: flex;
     background: none;
     margin-left: 10%;
 }
 
-.rodapePrincipal-link-socialMedia{
+.rodapePrincipal-author-link-socialMedia {
     margin: 0 10px;
     background: transparent;
 }
-.rodapePrincipal-link-socialMedia .fa-brands{
-    font-size: 40px;
+
+.rodapePrincipal-author-link-socialMedia .fa-brands {
+    font-size: 50px;
     background: transparent;
-    color: #FFFFFF;
+    color: #343A40;
 }
