@@ -1,13 +1,11 @@
 let textoinicial = document.querySelector(".panelIngreso-textArea");
 let textofinal = document.querySelector(".panelEgreso-textArea");
-let mensaje_validacion = document.getElementById('panelEgreso-mensaje-validacion');
-let mensaje_peticion = document.getElementById('panelEgreso-mensaje-peticion');
+let mensaje_validacion = document.getElementById('panelEgreso-mensaje');
 let btn_Copiar = document.getElementById('panelEgreso-buttonCopiar');
 
 function encriptar(texto) {
     if (texto == "") {
-        mensaje_validacion.style.display = 'block';
-        mensaje_peticion.style.display = 'block';
+        mensaje_validacion.style.display = "block";
         textoinicial.style.backgroundImage = url("../assets/icons/Muñeco.svg");
     } else {
         texto = texto.toLowerCase();
@@ -24,16 +22,15 @@ function encriptar(texto) {
 function btnEncriptar() {
     let textoEncriptado = encriptar(textoinicial.value);
     textofinal.value = textoEncriptado;
+    textofinal.style.height = textofinal.scrollHeight + "px";
     textoinicial.value = "";
     textofinal.style.backgroundImage = "none";
-    mensaje_validacion.style.display = 'none';
-    mensaje_peticion.style.display = 'none';
+    mensaje_validacion.style.display = "none";
 }
 
 function desencriptar(texto) {
     if (texto == "") {
-        mensaje_validacion.style.display = 'block';
-        mensaje_peticion.style.display = 'block';
+        mensaje_validacion.style.display = "block";
         textoinicial.style.backgroundImage = url("../assets/icons/Muñeco.svg");
     } else {
         texto = texto.toLowerCase();
@@ -50,14 +47,14 @@ function desencriptar(texto) {
 function btnDesencriptar() {
     let textoDesencriptado = desencriptar(textoinicial.value);
     textofinal.value = textoDesencriptado;
+    textofinal.style.height = textofinal.scrollHeight + "px";
     textoinicial.value = "";    
     textofinal.style.backgroundImage = "none";
-    mensaje_validacion.style.display = 'none';
-    mensaje_peticion.style.display = 'none';
+    mensaje_validacion.style.display = "none";
 }
 
 function mostrarBotonCopiar() {
-    btn_Copiar.style.display = 'block';
+    btn_Copiar.style.display = "block";
 }
 
 function copiar() {

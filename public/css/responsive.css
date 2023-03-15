@@ -30,19 +30,24 @@
     }
 
     .panelEgreso .container {
-        height: 130px;
+        height: auto;
+        width: auto;
     }
 
     .panelEgreso-textArea{
         background-image: none;
+        height: 10px;
+        max-height: 200px;
     }
 
     .panelEgreso-mensaje{
+        order:-1;
         margin: 32px 0 0 0;
     }
 
     .panelEgreso-buttonCopiar {
         width: 90%;
+        margin-top: 20px;
     }
 
     .rodapePrincipal .container {

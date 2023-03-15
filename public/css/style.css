@@ -50,6 +50,9 @@
     outline: none;
 }
 
+.panelIngreso-textArea::-webkit-scrollbar {
+    width: 0px;
+}
 .panelIngreso-infoIngreso {
     display: flex;
     height: 9%;
@@ -132,6 +135,9 @@
     background-position: center;
     color: #0A3871;
     border: none;
+}
+.panelEgreso-textArea::-webkit-scrollbar {
+    width: 0px;
 }
 
 .panelEgreso-textArea:focus {
