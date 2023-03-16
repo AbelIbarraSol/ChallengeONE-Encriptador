@@ -59,7 +59,7 @@
     width: 90%;
     align-self: flex-end;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
 }
 
 .panelIngreso-infoIngreso-subtitulo {
@@ -189,7 +189,6 @@
     background: none;
 }
 
-
 .container .rodapePrincipal-author{
     display: flex;
     justify-content: center;
@@ -199,29 +198,21 @@
     background: none;
 }
 
-.rodapePrincipal-author-logo {
-    width: 50px;
-    height: 50px;
-    background: none;
-}
-
 .rodapePrincipal-author .rodapePrincipal-author-copyrigth {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: center;
     height: 60px;
-    padding-left: 10px;
+    padding-right: 20px;
     background: none;
-    border-left: solid #343A40 5px;
+    border-right: solid #343A40 5px;
     color: #343A40;
 }
 
-
-
 .rodapePrincipal-author-copyrigth-texto {
     font-size: 16px;
-    text-align: start;
+    padding-bottom: 5px;
+    text-align: end;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     background: none;
@@ -230,7 +221,6 @@
 .rodapePrincipal-author .rodapePrincipal-author-link {
     display: flex;
     background: none;
-    margin-left: 10%;
 }
 
 .rodapePrincipal-author-link-socialMedia {
@@ -242,4 +232,93 @@
     font-size: 50px;
     background: transparent;
     color: #343A40;
+}
+
+/* Reponsive */
+@media screen and (max-width: 800px) {
+    .contenidoPrincipal {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .contenidoPrincipal .panelIngreso{
+        width: 90%;
+        align-self: center;
+    }
+    
+    .panelIngreso .container{
+        height: 750px;
+        margin-bottom: 64px;
+    }
+
+    .panelIngreso-button{
+        margin-bottom: 0;
+    }
+
+    .panelIngreso-textArea,.panelIngreso-infoIngreso,.panelIngreso-button {
+        width: 99%;
+        align-self: flex-start;
+    }
+
+    .contenidoPrincipal .panelEgreso {
+        width: 90%;
+        align-self: center;
+    }
+
+    .panelEgreso .container {
+        height: auto;
+        width: auto;
+        margin-bottom: 64px;
+    }
+
+    .panelEgreso-textArea{
+        background-image: none;
+        height: 10px;
+        max-height: 340px;
+    }
+
+    .panelEgreso-mensaje{
+        order:-1;
+        margin: 32px 0 0 0;
+    }
+
+    .panelEgreso-buttonCopiar {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .container  .rodapePrincipal-author{
+        flex-direction: column;
+        margin: 0 0 20px 0;
+    }
+
+    .rodapePrincipal-author .rodapePrincipal-author-copyrigth{
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .rodapePrincipal-author-copyrigth-texto{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .panelIngreso-button {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .panelIngreso-button-Encriptar {
+        width: 100%;
+    }
+    
+    .panelIngreso-button-Desencriptar {
+        width: 100%;
+    }
+
+    .panelEgreso-textArea{
+        background-image: none;
+        max-height: 590px;
+    }
 }
