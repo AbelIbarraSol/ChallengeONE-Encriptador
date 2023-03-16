@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Encriptador</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- Font family: inter Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="shortcut icon" href="../assets/icons/logo_title_padlock.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/ccf4c900d0.js" crossorigin="anonymous"></script>
+    <title>Encriptador | Challenge ONE</title>
 </head>
+
 <body>
-    <header>
-        <h1>Encryptador Web por Abel IBARRA</h1>
+    <header class="headerPrincipal">
     </header>
-    <main>
-        <section>
-            <textarea name="Ingrese el texto aquí" class="IngresarTexto" cols="30" rows="10"></textarea>
-        </section>
-        <section>
-            <div>
-                <h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam iure, 
-                    facilis amet animi, quo deserunt sit dolores corporis sunt natus sint ratione 
-                    laudantium odit, consequuntur delectus ipsum distinctio ut!
-                </h4>
+    <main class="contenidoPrincipal">
+        <section class="panelIngreso">
+            <div class="container">
+                <img class="panelIngreso-iconoLogo" src="../assets/icons/logo_alura.svg" alt="Logo de Alura">
+                <textarea class="panelIngreso-textArea" placeholder="Ingrese el texto aquí" cols="30"
+                    rows="10"></textarea>
+                <div class="panelIngreso-infoIngreso">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h6 class="panelIngreso-infoIngreso-subtitulo">Ingresa solo letras minúsculas y sin acentos.</h6>
+                </div>
+                <div class="panelIngreso-button">
+                    <button class="panelIngreso-button-Encriptar"
+                        onclick="btnEncriptar(), mostrarBotonCopiar()">Encriptar</button>
+                    <button class="panelIngreso-button-Desencriptar" onclick=" btnDesencriptar()">Desencriptar</button>
+                </div>
             </div>
-            <input type="button" class="btnCopiar" value="Copiar">
         </section>
-        <section>
-            <p>Apenas letras minusculas y sin acento</p>
-            <input type="button" class="btnEncriptar" value="Encriptar">
-            <input type="button" class="btnDesencriptar" value="Desencriptar">
+        <section class="panelEgreso">
+            <div class="container">
+                <textarea class="panelEgreso-textArea" cols="30" rows="10" readonly></textarea>
+                <div class="panelEgreso-mensaje" id="panelEgreso-mensaje">
+                    <h1 class="panelEgreso-mensaje-validacion" >Ningún mensaje fue encontrado</h1>
+                    <h4 class="panelEgreso-mensaje-peticion" >Ingresa el texto que desees encriptar o desencriptar </h4>
+                </div>
+                <button class="panelEgreso-buttonCopiar" id="panelEgreso-buttonCopiar" onclick="copiar()">Copiar</button>
+            </div>
         </section>
+        <script src="../js/script.js"></script>
     </main>
-    <footer>
-        <h3> Creado por Strange Corp for Challenge Encryptador</h3>
+
+    <footer class="rodapePrincipal">
+        <div class="container">
+            <section class="rodapePrincipal-author">
+                <div class="rodapePrincipal-author-copyrigth">
+                    <h6 class="rodapePrincipal-author-copyrigth-texto">&copy; 2023 Todos los derechos reservados.</h6>
+                    <h6 class="rodapePrincipal-author-copyrigth-texto">Desarrollado por Abel Ibarra Solgorre para Challenge ONE.</h6>
+                </div>
+                <div class="rodapePrincipal-author-link">
+                    <a class="rodapePrincipal-author-link-socialMedia" href="http://www.linkedin.com/in/abel-ibarra-solgorre"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="rodapePrincipal-author-link-socialMedia" href="https://github.com/AbelIbarraSol"><i class="fa-brands fa-github"></i></a>
+                    <a class="rodapePrincipal-author-link-socialMedia" href="https://codepen.io/mrStrange01"><i class="fa-brands fa-codepen"></i></a>
+                </div>
+            </section>
+        </div>
     </footer>
 </body>
+
 </html>

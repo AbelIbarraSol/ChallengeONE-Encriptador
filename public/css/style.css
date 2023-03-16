@@ -1,8 +1,324 @@
-h1{
-    color: blueviolet;
+* {
+    background: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
-h3{
+.headerPrincipal {
+    height: 40px;
+}
+
+.contenidoPrincipal {
+    display: flex;
+    justify-content: space-around;
+}
+
+.panelIngreso {
+    width: 60%;
+}
+
+.panelIngreso .container {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panelIngreso-iconoLogo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4%;
+}
+
+.panelIngreso-textArea {
+    width: 90%;
+    height: 60%;
+    align-self: flex-end;
+    font-size: 32px;
+    border: none;
+    border-radius: 20px;
+    resize: none;
+    color: #0A3871;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.panelIngreso-textArea:focus {
+    outline: none;
+}
+
+.panelIngreso-textArea::-webkit-scrollbar {
+    width: 0px;
+}
+.panelIngreso-infoIngreso {
+    display: flex;
+    height: 9%;
+    width: 90%;
+    align-self: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.panelIngreso-infoIngreso-subtitulo {
+    font-size: 16px;
+    color: #343A40;
+}
+
+.panelIngreso-infoIngreso .fa-circle-info {
+    color: #343A40;
+}
+
+.panelIngreso-button {
+    display: flex;
+    width: 90%;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    justify-content: space-between;
+}
+
+.panelIngreso-button-Encriptar {
+    width: 40%;
+    height: 50px;
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    font-size: 16px;
     text-align: center;
-    color: green;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.panelIngreso-button-Desencriptar {
+    width: 40%;
+    height: 50px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+.panelIngreso-button-Desencriptar:active {
+    background: none;
+}
+
+.panelEgreso {
+    width: 25%;
+}
+
+.panelEgreso .container {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #FFFFFF;
+    justify-content: space-between;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.panelEgreso-textArea {
+    width: 90%;
+    height: 60%;
+    padding: 5% 5% 0 5%;
+    font-size: 24px;
+    resize: none;
+    background: none;
+    background-image: url("../assets/icons/Muñeco.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #0A3871;
+    border: none;
+}
+.panelEgreso-textArea::-webkit-scrollbar {
+    width: 0px;
+}
+
+.panelEgreso-textArea:focus {
+    outline: none;
+}
+
+.panelEgreso-mensaje {
+    width: 80%;
+    height: 20%;
+    margin-bottom: 25%;
+    align-self: center;
+    background: none;
+}
+
+.panelEgreso-mensaje-validacion {
+    margin-bottom: 15px;
+    text-align: center;
+    background: none;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    color: #343A40;
+}
+
+.panelEgreso-mensaje-peticion {
+    font-size: 16px;
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: #495057;
+}
+
+.panelEgreso-buttonCopiar {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 20px;
+    display: none;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+.panelEgreso-buttonCopiar:active {
+    background: none;
+}
+
+.container .rodapePrincipal-author{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    margin: 30px 0 20px 0;
+    background: none;
+}
+
+.rodapePrincipal-author .rodapePrincipal-author-copyrigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+    padding-right: 20px;
+    background: none;
+    border-right: solid #343A40 5px;
+    color: #343A40;
+}
+
+.rodapePrincipal-author-copyrigth-texto {
+    font-size: 16px;
+    padding-bottom: 5px;
+    text-align: end;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background: none;
+}
+
+.rodapePrincipal-author .rodapePrincipal-author-link {
+    display: flex;
+    background: none;
+}
+
+.rodapePrincipal-author-link-socialMedia {
+    margin: 0 10px;
+    background: transparent;
+}
+
+.rodapePrincipal-author-link-socialMedia .fa-brands {
+    font-size: 50px;
+    background: transparent;
+    color: #343A40;
+}
+
+/* Reponsive */
+@media screen and (max-width: 800px) {
+    .contenidoPrincipal {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .contenidoPrincipal .panelIngreso{
+        width: 90%;
+        align-self: center;
+    }
+    
+    .panelIngreso .container{
+        height: 750px;
+        margin-bottom: 64px;
+    }
+
+    .panelIngreso-button{
+        margin-bottom: 0;
+    }
+
+    .panelIngreso-textArea,.panelIngreso-infoIngreso,.panelIngreso-button {
+        width: 99%;
+        align-self: flex-start;
+    }
+
+    .contenidoPrincipal .panelEgreso {
+        width: 90%;
+        align-self: center;
+    }
+
+    .panelEgreso .container {
+        height: auto;
+        width: auto;
+        margin-bottom: 64px;
+    }
+
+    .panelEgreso-textArea{
+        background-image: none;
+        height: 10px;
+        max-height: 340px;
+    }
+
+    .panelEgreso-mensaje{
+        order:-1;
+        margin: 32px 0 0 0;
+    }
+
+    .panelEgreso-buttonCopiar {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .container  .rodapePrincipal-author{
+        flex-direction: column;
+        margin: 0 0 20px 0;
+    }
+
+    .rodapePrincipal-author .rodapePrincipal-author-copyrigth{
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .rodapePrincipal-author-copyrigth-texto{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .panelIngreso-button {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .panelIngreso-button-Encriptar {
+        width: 100%;
+    }
+    
+    .panelIngreso-button-Desencriptar {
+        width: 100%;
+    }
+
+    .panelEgreso-textArea{
+        background-image: none;
+        max-height: 590px;
+    }
 }
