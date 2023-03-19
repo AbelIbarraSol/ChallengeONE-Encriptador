@@ -26,6 +26,6 @@ El presente proyecto fue creado para el Challenge ONE Principiante en Programaci
 
 ![Diseño sin título](https://user-images.githubusercontent.com/120345763/226158801-8467e987-ad3c-4e0d-957d-63be8ba4078f.gif)
 
-### 👨‍💻 Sigueme en:
+### 👍 Sigueme en:
 
 [![General badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](http://www.linkedin.com/in/abel-ibarra-solgorre)
